@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body {
+  background-color: green;
+  font-size: 16px;
+  font-family: 'Fira Code', monospace;
+}
+
+.containter {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.bookMenu__row {
+  background: #fff;
+  border: 5px solid rgba(182, 174, 174, 0.301);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 30px 20px 0 20px;
+}
+
+.book__item {
+  padding: 20px 0;
+  border-radius: 5px;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.book__item:hover {
+  -webkit-box-shadow: 0px 0px 29px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 29px -1px rgba(0, 0, 0, 0.424);
+}
+
+.book__img {
+  margin-bottom: 10px;
+  width: 150px;
+  height: 250px;
+}
+
+.book__info {
+  font-size: 14px;
+  width: 200px;
+}
+
+.book__name {
+  color: black;
+  margin-bottom: 3px;
+}
+
+.book__author {
+  color: #6b6b6b;
+  margin-bottom: 10px;
+}
+
+.book__price {
+  color: #292727;
+  font-weight: 700;
+  margin-bottom: 7px;
+  font-size: 16px;
+}
+
+.book__btn {
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #36c6ff;
+  width: 200px;
+}
+
+.book_btn:hover {
+  background-color: #2faadb;
+}

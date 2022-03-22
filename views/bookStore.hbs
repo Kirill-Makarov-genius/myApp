@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&display=swap" rel="stylesheet">
+    <title>Book Store</title>
+</head>
+<body>
+    <div class="bookStore">
+        <header>
+            <div>HEADER</div>
+        </header>
+        <div class="content">
+            <div class="bookMenu">
+                <div class="containter">
+                    <div class="bookMenu__row">
+                        {{#each books}}
+                        <div class="book__item">
+                                <a href="book-store/{{_id}}"><img class="book__img" src="../uploads/{{this.bookcover}}" alt="bookcover"/></a>
+                                <a href="#" class="book__info">
+                                    <div class="book__name">{{this.name}}</div>
+                                    <div class="book__author">{{this.author}}</div>
+                                    <div class="book__price">{{this.price}}₽</div>
+                                </a>
+                                <a href="" class="book__btn">
+                                    <div>Купить</div>
+                                </a>
+                        </div>
+                        {{/each}}
+
+                    </div>
+                    <div class="bookMenu__nav">
+                        <a href="?page={{pagination.previous}}">Back</a>
+                        <a>Current</a>
+                        <a href="?page={{pagination.next}}">Next</a>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <footer>
+            <div>FOOTER</div>
+        </footer>
+    </div>
+</body>
+</html>

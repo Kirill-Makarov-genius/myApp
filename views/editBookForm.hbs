@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Book</title>
+</head>
+<body>
+    <h1>Edit Book</h1>
+    {{#with book}}
+    <form action="/book-store/edit/{{_id}}?_method=PUT" method="POST" enctype="multipart/form-data">
+        <label for="name">Book's name</label>
+        <input name="name"type="text" id="name"/ value="{{name}}">
+        <label for="author">Author</label>
+        <input name="author" type="text" id="author" value="{{author}}"/>
+        <label for="bookcover">Bookcover</label>
+        <input name="bookcover" type="file" id="bookcover" value="{{bookcover}}"/>
+        <label for="price">Book's price</label>
+        <input name="price" type="number" id="price" value="{{price}}"/>
+        <input type="submit" value="Send"/>
+    </form>
+    {{/with}}
+</body>
+</html>

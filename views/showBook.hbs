@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{book.name}}</title>
+</head>
+<body>
+    {{#with book}}
+    <div class="book">
+        <div class="container">
+            <div class="book__item">
+                <div class="book__name">{{name}}</div>
+                <div class="book__author">{{author}}</div>
+                <img class="book__img" src="../uploads/{{bookcover}}" alt=""/>
+                <div class="book__price">{{price}}</div>
+            </div>
+        </div>
+    </div>
+    <a href="edit/{{_id}}">Edit</a>
+    <form action="delete/{{_id}}?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+    </form>
+    {{/with}}
+</body>
+</html>
